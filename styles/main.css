@@ -1,0 +1,160 @@
+@import url('larger.css');
+@import url('small.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ultra-violet: #564787;
+  --thistle: #DBCBD8;
+  --azure: #F2FDFF;
+  --tiffany-blue: #9AD4D6;
+  --oxford-blue: #101935;
+  --heading-font: "Open Sans", sans-serif;
+  --text-font: "Prata", serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+}
+
+body {
+  font-family: var(--text-font);
+}
+
+p {
+  line-height: 1.6;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: var(--oxford-blue);
+}
+
+main {
+  padding: 10px 30px;
+}
+
+header .header-inner {
+  background: var(--ultra-violet);
+  color: var(--azure);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 1rem 2rem;
+}
+
+header .header-inner img {
+  max-width: 100px;
+  border-radius: 2px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+}
+
+header .header-inner span {
+  font-family: var(--heading-font);
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+section {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  min-height: 300px;
+}
+
+.title {
+  background-color: var(--ultra-violet);
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  color: var(--azure);
+  text-align: center;
+  padding: 10px;
+}
+
+#section1 ul {
+  padding: 0 30px;
+  color: var(--oxford-blue);
+}
+
+#section2 #city {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 30px;
+  gap: 20px;
+}
+
+#section2 #city img {
+  max-width: 100%;
+}
+
+#section3 {
+  text-align: center;
+}
+
+#section3 .filter {
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+#section3 .filter button {
+  border: none;
+  font-family: var(--text-font);
+  color: var(--azure);
+  border-radius: 10px;
+  background-color: var(--oxford-blue);
+  font-weight: 800;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#section3 .filter button:hover {
+  background-color: var(--ultra-violet);
+  color: var(--azure);
+  cursor: pointer;
+}
+
+#section3 .course-list {
+  padding: 20px 30px;
+}
+
+#section3 .course {
+  background-color: var(--tiffany-blue);
+  color: var(--oxford-blue);
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+#section3 .incomplete {
+  background-color: var(--oxford-blue);
+  color: var(--azure);
+}
+
+
+footer {
+  text-align: center;
+  background-color: var(--ultra-violet);
+  color: var(--azure);
+  padding: 10px;
+}
+
+#last-update {
+  font-size: 0.8rem;
+  color: var(--azure);
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Personal homepage of Isabella Rodrigues P. Silva for WDD 231: Web Frontend Development, featuring course work, information about São Paulo, and a web programming certificate.">
+  <meta name="author" content="Isabella Rodrigues Pereira da Silva">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Prata&display=swap"
+    rel="stylesheet">
+  <title>WDD 231: Web Frontend Development - Isabella Rodrigues P. Silva</title>
+  <script src="scripts/course.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/navigation.js" defer></script>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+  <header>
+    <div class="header-inner">
+      <img src="images/me.webp" alt="Isabella Rodrigues P. Silva" id="profile-image">
+      <span>Isabella Rodrigues P. Silva</span>
+    </div>
+    <button id="mobile-menu" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navbar">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="lucide lucide-menu-icon lucide-menu">
+        <path d="M4 12h16" />
+        <path d="M4 18h16" />
+        <path d="M4 6h16" />
+      </svg>
+    </button>
+    <nav id="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Chamber</a></li>
+        <li><a href="#">Final</a></li>
+        <li><a href="#">GitHub Profile</a></li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>WDD 231: Web Frontend Development - Isabella Rodrigues P. Silva</h1>
+    <div class="content">
+      <section id="section1">
+        <div class="title">
+          <h2>Course Work</h2>
+        </div>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </section>
+
+      <section id="section2">
+        <div class="title">
+          <h2>São Paulo, Brazil</h2>
+        </div>
+        <div id="city">
+          <img src="images/sp.webp" alt="Ponte Estaiada e Rio Tietê">
+          <p>Ponte Estaiada</p>
+        </div>
+      </section>
+
+      <section id="section3">
+        <div class="title">
+          <h2>Web and Computer Programming Certificate</h2>
+        </div>
+        <div class="filter">
+          <button class="filter-btn">All</button>
+          <button class="filter-btn">CSE</button>
+          <button class="filter-btn">WDD</button>
+        </div>
+        <p id="number-credits"></p>
+        <div class="course-list">
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; <span id="current-year"></span> 🌺 Isabella Rodrigues P. Silva 🌺 Brazil </p>
+    <p id="last-update">Last Update</p>
+  </footer>
+</body>
+
+</html>
