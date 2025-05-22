@@ -1,0 +1,79 @@
+:root {
+    --azure: #F2FDFF;
+    --oxford-blue: #101935;
+    --tiffany-blue: #9AD4D6;
+    --heading-font: "Open Sans", sans-serif;
+    --text-font: "Prata", serif;
+}
+
+body {
+    background-color: var(--azure);
+    color: var(--oxford-blue);
+    font-family: var(--text-font);
+}
+
+.view-toggle {
+    margin-bottom: 1rem;
+}
+
+.view-toggle button {
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    border: 1px solid var(--tiffany-blue);
+    background-color: var(--azure);
+    color: var(--oxford-blue);
+    font-family: var(--heading-font);
+    transition: background 0.2s, color 0.2s;
+}
+
+.view-toggle button.active {
+    background-color: var(--tiffany-blue);
+    color: var(--oxford-blue);
+}
+
+.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.grid-view .member-card {
+    border: 1px solid var(--tiffany-blue);
+    padding: 1rem;
+    text-align: center;
+    background-color: #fff;
+    font-family: var(--text-font);
+}
+
+.grid-view .member-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.grid-view .member-card h2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+    color: var(--oxford-blue);
+    font-family: var(--heading-font);
+}
+
+.list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.list-view .member-list-item {
+    border: 1px solid var(--tiffany-blue);
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    font-family: var(--text-font);
+}
+
+.list-view .member-list-item h2 {
+    margin-bottom: 0.25rem;
+    color: var(--oxford-blue);
+    font-family: var(--heading-font);
+}

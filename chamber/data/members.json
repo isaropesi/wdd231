@@ -1,0 +1,72 @@
+[
+    {
+        "name": "CCSTI Informática Empresarial",
+        "address": "R. Esteves Júnior, 366 - sala 1004 - Centro, Florianópolis - SC, 88015-130",
+        "phone": "(48) 3039-0069",
+        "website": "https://ccsti.com.br",
+        "image": "ccsti.webp",
+        "membershipLevel": 3,
+        "description": "Leading provider of cloud-based business solutions.",
+        "founded": 2010
+    },
+    {
+        "name": "A Tenda Orgânicos e Agroecológicos",
+        "address": "Av. Pequeno Príncipe, 1202 - Campeche, Florianópolis - SC, 88063-000",
+        "phone": "(48) 99928-7056",
+        "website": "https://www.atendaorganicos.com.br",
+        "image": "atenda.webp",
+        "membershipLevel": 2,
+        "description": "Organic food supplier and local farm network.",
+        "founded": 2015
+    },
+    {
+        "name": "Desterro Arquitetos",
+        "address": "R. Lauro Linhares, 2010 - sala 104 bloco A - Trindade, Florianópolis - SC, 88036-002",
+        "phone": "(48) 99135-6663",
+        "website": "https://www.desterro.arq.br/",
+        "image": "desterro.webp",
+        "membershipLevel": 1,
+        "description": "Award-winning architecture and design firm.",
+        "founded": 2005
+    },
+    {
+        "name": "Floricultura Recanto das Flores",
+        "address": "Av. das Flores, 1234 - Centro, Florianópolis - SC, 88000-000",
+        "phone": "(48) 99876-5432",
+        "website": "https://www.recantodasflores.com.br",
+        "image": "recanto.webp",
+        "membershipLevel": 2,
+        "description": "Specialized in flowers, arrangements, and event decoration.",
+        "founded": 2011
+    },
+    {
+        "name": "Gym Club",
+        "address": "Av. Mauro Ramos, 1725 - Centro, Florianópolis - SC, 88020-302",
+        "phone": " (48) 99138-2668",
+        "website": "https://gymclubfloripa.com.br",
+        "image": "gym.webp",
+        "membershipLevel": 1,
+        "description": "State-of-the-art fitness center and wellness programs.",
+        "founded": 2018
+    },
+    {
+        "name": "Lovetur Agência de Viagens",
+        "address": "R. Dom Jaime Câmara, 170 - sala 801 - Centro, Florianópolis - SC, 88015-120",
+        "phone": "(48) 3223-4354",
+        "website": "https://www.lovetur.com.br/",
+        "image": "lovetur.webp",
+        "membershipLevel": 3,
+        "description": "Personalized travel planning and vacation packages.",
+        "founded": 2000
+    },
+    {
+        "name": "Letraria Livraria",
+        "address": "Rodovia Dr. Antônio Luiz Moura Gonzaga, 3339 - loja C08 - Rio Tavares, Florianópolis - SC, 88048-301",
+        "phone": "(48) 3371-1114",
+        "website": "https://www.letraria.com.br",
+        "image": "letraria.webp",
+        "membershipLevel": 2,
+        "description": "Independent bookstore and community events.",
+        "founded": 1998
+    }
+]
