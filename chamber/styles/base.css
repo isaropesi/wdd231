@@ -94,6 +94,55 @@ footer {
     font-family: var(--heading-font);
 }
 
+.home-masonry {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+    align-items: start;
+}
+
+.home-masonry section {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(16, 25, 53, 0.08);
+    padding: 1.5rem 1rem;
+    min-width: 0;
+    break-inside: avoid;
+}
+
+.spotlights-masonry {
+    margin: 2rem 0;
+}
+
+.spotlights-masonry h2 {
+    margin-bottom: 1rem;
+}
+
+.spotlights-masonry #spotlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.spotlights-masonry .member-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(16, 25, 53, 0.08);
+    padding: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .home-masonry {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .spotlights-masonry #spotlights {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 @media (max-width: 768px) {
     nav ul {
         display: flex;
@@ -123,5 +172,20 @@ footer {
 
     .flag-container h1 {
         font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .home-masonry {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .home-masonry section {
+        padding: 1rem 0.5rem;
+    }
+
+    .spotlights-masonry #spotlights {
+        grid-template-columns: 1fr;
     }
 }
