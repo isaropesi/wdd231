@@ -81,6 +81,7 @@ const courses = [
 const courseList = document.querySelector('.course-list');
 const filterButtons = document.querySelectorAll('.filter button');
 const numberCredit = document.getElementById('number-credits');
+const courseModal = document.getElementById('course-modal');
 
 function displayCourses(filter = 'All') {
   courseList.innerHTML = '';
@@ -93,35 +94,64 @@ function displayCourses(filter = 'All') {
   const totalCredits = filteredCourses.reduce((total, course) => {
     total += course.credits;
     return total;
-  }
-    , 0);
+  }, 0);
 
   numberCredit.innerText = `The total number of course listed below is: ${totalCredits}`;
 
-  filteredCourses.forEach(course => {
+  filteredCourses.forEach((course, idx) => {
     const courseElement = document.createElement('div');
     courseElement.className = `course ${course.completed ? '' : 'incomplete'}`;
     courseElement.textContent = `${course.subject} ${course.number}`;
-
     courseElement.title = `${course.title} - ${course.description}`;
+    courseElement.tabIndex = 0;
+    courseElement.setAttribute('role', 'button');
+    courseElement.setAttribute('aria-label', `${course.subject} ${course.number}: ${course.title}`);
+
+    // Modal trigger
+    courseElement.addEventListener('click', () => showCourseModal(course));
+    courseElement.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        showCourseModal(course);
+      }
+    });
 
     courseList.appendChild(courseElement);
   });
+}
+
+function showCourseModal(course) {
+  courseModal.innerHTML = `
+    <button class="close-modal" aria-label="Close">&times;</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits:</strong> ${course.credits}</p>
+    <p><strong>Description:</strong> ${course.description}</p>
+    <p><strong>Certificate:</strong> ${course.certificate}</p>
+    <p><strong>Technology:</strong> ${course.technology.join(', ')}</p>
+  `;
+  courseModal.showModal();
+
+  // Close button
+  courseModal.querySelector('.close-modal').onclick = () => courseModal.close();
+
+  // Close on click outside
+  courseModal.addEventListener('click', function handler(e) {
+    if (e.target === courseModal) {
+      courseModal.close();
+    }
+  }, { once: true });
 }
 
 function initializeFilters() {
   filterButtons.forEach(button => {
     button.addEventListener('click', () => {
       filterButtons.forEach(btn => btn.classList.remove('active'));
-
       button.classList.add('active');
-
       displayCourses(button.textContent);
     });
   });
 
   displayCourses();
-
   filterButtons[0].classList.add('active');
 }
 
