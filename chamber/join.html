@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join the Florianópolis Chamber of Commerce.">
+    <meta name="author" content="Isabella Rodrigues P. Silva">
+    <title>Join - Florianópolis Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="icon" href="favicon.ico">
+    <style>
+        /* Membership cards animation */
+        .membership-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .membership-card {
+            background: var(--tiffany-blue);
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(16, 25, 53, 0.08);
+            padding: 1.5rem 1rem;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: cardFadeIn 0.7s forwards;
+        }
+
+        .membership-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .membership-card:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .membership-card:nth-child(3) {
+            animation-delay: 0.5s;
+        }
+
+        .membership-card:nth-child(4) {
+            animation-delay: 0.7s;
+        }
+
+        @keyframes cardFadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .membership-card a {
+            color: var(--oxford-blue);
+            text-decoration: underline;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        @media (min-width: 900px) {
+            .join-container {
+                display: flex;
+                gap: 2rem;
+                align-items: flex-start;
+            }
+
+            .membership-cards {
+                flex-direction: column;
+                width: 350px;
+                min-width: 250px;
+                margin-top: 0;
+            }
+
+            .join-form {
+                flex: 1;
+            }
+        }
+
+        @media (max-width: 899px) {
+            .join-container {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        .join-form label {
+            display: block;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .join-form input,
+        .join-form textarea,
+        .join-form select {
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 0.3rem;
+            border-radius: 5px;
+            border: 1px solid var(--tiffany-blue);
+            font-family: var(--text-font);
+            font-size: 1rem;
+        }
+
+        .join-form textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+
+        .join-form input[type="submit"] {
+            background: var(--oxford-blue);
+            color: var(--azure);
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: background 0.2s;
+        }
+
+        .join-form input[type="submit"]:hover {
+            background: var(--tiffany-blue);
+            color: var(--oxford-blue);
+        }
+
+        dialog.membership-modal {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 8px 32px rgba(16, 25, 53, 0.25);
+            padding: 2rem 1.5rem 1.5rem 1.5rem;
+            max-width: 400px;
+            width: 90vw;
+            background: var(--azure);
+            color: var(--oxford-blue);
+            font-family: var(--text-font);
+            position: relative;
+            z-index: 100;
+        }
+
+        dialog.membership-modal::backdrop {
+            background: rgba(16, 25, 53, 0.5);
+            backdrop-filter: blur(2px);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 0.5rem;
+            right: 1rem;
+            background: var(--tiffany-blue);
+            color: var(--oxford-blue);
+            border: none;
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+            font-size: 1.3rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .close-modal:hover {
+            background: var(--oxford-blue);
+            color: var(--azure);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="./images/logo.png" alt="Florianópolis Chamber of Commerce Logo" class="logo">
+            <h1>Florianópolis Chamber of Commerce</h1>
+        </div>
+        <nav>
+            <button id="menu-button">&#9776;</button>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li class="active"><a href="join.html" aria-current="page">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Join the Chamber</h1>
+        <div class="join-container">
+            <form class="join-form" method="get" action="thankyou.html" autocomplete="on">
+                <label>
+                    First Name
+                    <input type="text" name="firstName" title="First Name" autocomplete="given-name" required>
+                </label>
+                <label>
+                    Last Name
+                    <input type="text" name="lastName" title="Last Name" autocomplete="family-name" required>
+                </label>
+                <label>
+                    Organizational Title
+                    <input type="text" name="orgTitle" title="Organizational Title" autocomplete="organization-title"
+                        pattern="[A-Za-z\s\-]{7,}" placeholder="e.g. Marketing Manager" required>
+                </label>
+                <label>
+                    Email
+                    <input type="email" name="email" title="Email Address" autocomplete="email" required
+                        placeholder="your@email.com">
+                </label>
+                <label>
+                    Mobile Phone
+                    <input type="tel" name="phone" title="Mobile Phone" autocomplete="tel" required>
+                </label>
+                <label>
+                    Business/Organization Name
+                    <input type="text" name="organization" title="Organization Name" autocomplete="organization"
+                        required>
+                </label>
+                <label>
+                    Membership Level
+                    <select name="membership" title="Membership Level" required>
+                        <option value="" disabled selected>Select a level</option>
+                        <option value="NP">NP Membership (Non-Profit, Free)</option>
+                        <option value="Bronze">Bronze Membership</option>
+                        <option value="Silver">Silver Membership</option>
+                        <option value="Gold">Gold Membership</option>
+                    </select>
+                </label>
+                <label>
+                    Business/Organization Description
+                    <textarea name="description" title="Business/Organization Description"></textarea>
+                </label>
+                <input type="hidden" name="timestamp" id="timestamp">
+                <input type="submit" value="Submit Application">
+            </form>
+            <div class="membership-cards">
+                <div class="membership-card" id="np-card">
+                    <h3>NP Membership</h3>
+                    <p>For non-profit organizations. No fee.</p>
+                    <a href="#" data-modal="np-modal">See Benefits</a>
+                </div>
+                <div class="membership-card" id="bronze-card">
+                    <h3>Bronze Membership</h3>
+                    <p>Entry-level benefits for small businesses.</p>
+                    <a href="#" data-modal="bronze-modal">See Benefits</a>
+                </div>
+                <div class="membership-card" id="silver-card">
+                    <h3>Silver Membership</h3>
+                    <p>Enhanced benefits and event discounts.</p>
+                    <a href="#" data-modal="silver-modal">See Benefits</a>
+                </div>
+                <div class="membership-card" id="gold-card">
+                    <h3>Gold Membership</h3>
+                    <p>All benefits plus premium advertising.</p>
+                    <a href="#" data-modal="gold-modal">See Benefits</a>
+                </div>
+            </div>
+        </div>
+        <!-- Membership Modals -->
+        <dialog id="np-modal" class="membership-modal">
+            <button class="close-modal" aria-label="Close">&times;</button>
+            <h2>NP Membership Benefits</h2>
+            <ul>
+                <li>No membership fee</li>
+                <li>Access to networking events</li>
+                <li>Basic training sessions</li>
+                <li>Non-profit promotion opportunities</li>
+            </ul>
+        </dialog>
+        <dialog id="bronze-modal" class="membership-modal">
+            <button class="close-modal" aria-label="Close">&times;</button>
+            <h2>Bronze Membership Benefits</h2>
+            <ul>
+                <li>All NP benefits</li>
+                <li>Business directory listing</li>
+                <li>Discounted event tickets</li>
+                <li>Quarterly newsletter</li>
+            </ul>
+        </dialog>
+        <dialog id="silver-modal" class="membership-modal">
+            <button class="close-modal" aria-label="Close">&times;</button>
+            <h2>Silver Membership Benefits</h2>
+            <ul>
+                <li>All Bronze benefits</li>
+                <li>Spotlight advertising on home page</li>
+                <li>Priority event registration</li>
+                <li>Exclusive training workshops</li>
+            </ul>
+        </dialog>
+        <dialog id="gold-modal" class="membership-modal">
+            <button class="close-modal" aria-label="Close">&times;</button>
+            <h2>Gold Membership Benefits</h2>
+            <ul>
+                <li>All Silver benefits</li>
+                <li>Premium homepage advertising</li>
+                <li>VIP event invitations</li>
+                <li>Personalized business consulting</li>
+            </ul>
+        </dialog>
+    </main>
+    <footer>
+        <p>&copy; <span id="current-year"></span> | Isabella Rodrigues P. Silva | WDD 231</p>
+        <p id="last-modified"></p>
+    </footer>
+    <script>
+        // Set timestamp on page load
+        document.getElementById('timestamp').value = new Date().toISOString();
+
+        // Modal logic
+        document.querySelectorAll('.membership-card a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const modal = document.getElementById(this.dataset.modal);
+                if (modal) {
+                    modal.showModal();
+                    modal.querySelector('.close-modal').onclick = () => modal.close();
+                    modal.addEventListener('click', function handler(event) {
+                        if (event.target === modal) modal.close();
+                    }, { once: true });
+                }
+            });
+        });
+    </script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

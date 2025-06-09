@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for joining the Florianópolis Chamber of Commerce.">
+    <meta name="author" content="Isabella Rodrigues P. Silva">
+    <title>Thank You - Florianópolis Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="icon" href="favicon.ico">
+    <style>
+        .thankyou-container {
+            max-width: 500px;
+            margin: 2rem auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(16, 25, 53, 0.08);
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+
+        .thankyou-container h2 {
+            color: var(--oxford-blue);
+            margin-bottom: 1rem;
+        }
+
+        .thankyou-details {
+            text-align: left;
+            margin: 2rem auto 0 auto;
+            background: var(--tiffany-blue);
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            color: var(--oxford-blue);
+            font-size: 1.1rem;
+        }
+
+        .thankyou-details dt {
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        .thankyou-details dd {
+            margin-left: 0;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="./images/logo.png" alt="Florianópolis Chamber of Commerce Logo" class="logo">
+            <h1>Florianópolis Chamber of Commerce</h1>
+        </div>
+        <nav>
+            <button id="menu-button">&#9776;</button>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="thankyou-container">
+            <h2>Thank You for Joining!</h2>
+            <p>Your application has been received. We appreciate your interest in the Florianópolis Chamber of Commerce.
+            </p>
+            <p>Here is a summary of your submission:</p>
+            <dl class="thankyou-details">
+                <dt>First Name</dt>
+                <dd id="firstName"></dd>
+                <dt>Last Name</dt>
+                <dd id="lastName"></dd>
+                <dt>Email</dt>
+                <dd id="email"></dd>
+                <dt>Mobile Phone</dt>
+                <dd id="phone"></dd>
+                <dt>Business/Organization Name</dt>
+                <dd id="organization"></dd>
+                <dt>Submission Date</dt>
+                <dd id="timestamp"></dd>
+            </dl>
+            <p>If you have any questions, please <a href="mailto:info@floripachamber.com">contact us</a>.</p>
+            <a href="index.html" class="cta-join" style="margin-top:2rem;display:inline-block;">Return Home</a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="current-year"></span> | Isabella Rodrigues P. Silva | WDD 231</p>
+        <p id="last-modified"></p>
+    </footer>
+    <script src="scripts/main.js"></script>
+    <script>
+        // Parse URL parameters and display required fields
+        function getParam(name) {
+            const url = new URL(window.location.href);
+            return url.searchParams.get(name) || '';
+        }
+        document.getElementById('firstName').textContent = getParam('firstName');
+        document.getElementById('lastName').textContent = getParam('lastName');
+        document.getElementById('email').textContent = getParam('email');
+        document.getElementById('phone').textContent = getParam('phone');
+        document.getElementById('organization').textContent = getParam('organization');
+        document.getElementById('timestamp').textContent = getParam('timestamp') ? new Date(getParam('timestamp')).toLocaleString() : '';
+
+        // Set current year and last modified
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.getElementById('last-modified').textContent = `Last Modified: ${document.lastModified}`;
+    </script>
+</body>
+
+</html>
