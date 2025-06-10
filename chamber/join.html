@@ -4,166 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Join the Florianópolis Chamber of Commerce.">
+    <meta name="description"
+        content="Join the Florianópolis Chamber of Commerce. Become a member and enjoy exclusive benefits, networking, and business opportunities.">
     <meta name="author" content="Isabella Rodrigues P. Silva">
     <title>Join - Florianópolis Chamber of Commerce</title>
+    <meta property="og:title" content="Join - Florianópolis Chamber of Commerce">
+    <meta property="og:description"
+        content="Become a member of the Florianópolis Chamber of Commerce and unlock exclusive benefits, networking events, and business growth opportunities.">
+    <meta property="og:image" content="https://isaropesi.github.io/wdd231/chamber/images/logo.png">
+    <meta property="og:url" content="https://isaropesi.github.io/wdd231/chamber/join.html">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/join.css">
     <link rel="icon" href="favicon.ico">
-    <style>
-        /* Membership cards animation */
-        .membership-cards {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .membership-card {
-            background: var(--tiffany-blue);
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(16, 25, 53, 0.08);
-            padding: 1.5rem 1rem;
-            text-align: center;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: cardFadeIn 0.7s forwards;
-        }
-
-        .membership-card:nth-child(1) {
-            animation-delay: 0.1s;
-        }
-
-        .membership-card:nth-child(2) {
-            animation-delay: 0.3s;
-        }
-
-        .membership-card:nth-child(3) {
-            animation-delay: 0.5s;
-        }
-
-        .membership-card:nth-child(4) {
-            animation-delay: 0.7s;
-        }
-
-        @keyframes cardFadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .membership-card a {
-            color: var(--oxford-blue);
-            text-decoration: underline;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        @media (min-width: 900px) {
-            .join-container {
-                display: flex;
-                gap: 2rem;
-                align-items: flex-start;
-            }
-
-            .membership-cards {
-                flex-direction: column;
-                width: 350px;
-                min-width: 250px;
-                margin-top: 0;
-            }
-
-            .join-form {
-                flex: 1;
-            }
-        }
-
-        @media (max-width: 899px) {
-            .join-container {
-                display: flex;
-                flex-direction: column;
-            }
-        }
-
-        .join-form label {
-            display: block;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .join-form input,
-        .join-form textarea,
-        .join-form select {
-            width: 100%;
-            padding: 0.5rem;
-            margin-top: 0.3rem;
-            border-radius: 5px;
-            border: 1px solid var(--tiffany-blue);
-            font-family: var(--text-font);
-            font-size: 1rem;
-        }
-
-        .join-form textarea {
-            min-height: 80px;
-            resize: vertical;
-        }
-
-        .join-form input[type="submit"] {
-            background: var(--oxford-blue);
-            color: var(--azure);
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-            margin-top: 1rem;
-            transition: background 0.2s;
-        }
-
-        .join-form input[type="submit"]:hover {
-            background: var(--tiffany-blue);
-            color: var(--oxford-blue);
-        }
-
-        dialog.membership-modal {
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 8px 32px rgba(16, 25, 53, 0.25);
-            padding: 2rem 1.5rem 1.5rem 1.5rem;
-            max-width: 400px;
-            width: 90vw;
-            background: var(--azure);
-            color: var(--oxford-blue);
-            font-family: var(--text-font);
-            position: relative;
-            z-index: 100;
-        }
-
-        dialog.membership-modal::backdrop {
-            background: rgba(16, 25, 53, 0.5);
-            backdrop-filter: blur(2px);
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 0.5rem;
-            right: 1rem;
-            background: var(--tiffany-blue);
-            color: var(--oxford-blue);
-            border: none;
-            border-radius: 50%;
-            width: 2rem;
-            height: 2rem;
-            font-size: 1.3rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-
-        .close-modal:hover {
-            background: var(--oxford-blue);
-            color: var(--azure);
-        }
-    </style>
 </head>
 
 <body>
@@ -183,7 +36,7 @@
         </nav>
     </header>
     <main>
-        <h1>Join the Chamber</h1>
+        <h1>Join - Florianópolis Chamber of Commerce</h1>
         <div class="join-container">
             <form class="join-form" method="get" action="thankyou.html" autocomplete="on">
                 <label>
