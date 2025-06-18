@@ -9,7 +9,15 @@ async function loadDiscoverCards() {
         card.innerHTML = `
             <h2>${item.title}</h2>
             <figure>
-                <img src="images/${item.image}" alt="${item.title}">
+                <img 
+                    data-src="images/${item.image}" 
+                    src="images/placeholder.png" 
+                    alt="${item.title}" 
+                    loading="lazy"
+                    class="discover-img"
+                    width="320" height="200"
+                    style="background:#eee;min-height:120px;"
+                >
             </figure>
             <address>${item.address}</address>
             <p>${item.description}</p>
@@ -17,6 +25,32 @@ async function loadDiscoverCards() {
         `;
         gallery.appendChild(card);
     });
+
+    // Lazy-load images using Intersection Observer
+    if ('IntersectionObserver' in window) {
+        const imgs = document.querySelectorAll('.discover-img');
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                    }
+                    obs.unobserve(img);
+                }
+            });
+        }, { rootMargin: '100px' });
+        imgs.forEach(img => observer.observe(img));
+    } else {
+        // Fallback: load all images
+        document.querySelectorAll('.discover-img').forEach(img => {
+            if (img.dataset.src) {
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+            }
+        });
+    }
 
     // Modal logic
     let modal = document.getElementById('discover-modal');
@@ -41,7 +75,7 @@ async function loadDiscoverCards() {
             const content = `
                 <h2>${item.title}</h2>
                 <figure>
-                    <img src="images/${item.image}" alt="${item.title}" style="width:100%;max-width:350px;border-radius:8px;">
+                    <img src="images/${item.image}" alt="${item.title}" style="width:100%;max-width:350px;border-radius:8px;" loading="lazy">
                 </figure>
                 <address>${item.address}</address>
                 <p>${item.description}</p>
