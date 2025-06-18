@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brazilian Culture & Cuisine</title>
+    <meta name="description"
+        content="Explore the diverse culture and cuisine of Brazil's regions. Discover dishes, festivals, and traditions.">
+    <meta name="author" content="Isabella Rodrigues P. Silva">
+    <meta property="og:title" content="Brazilian Culture & Cuisine">
+    <meta property="og:description" content="Discover the unique food, festivals, and traditions of Brazil's regions.">
+    <meta property="og:image" content="images/hero-brazil.webp">
+    <meta property="og:url" content="https://isaropesi.github.io/wdd231/final/culture.html">
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <button id="menu-btn" aria-label="Open navigation">&#9776;</button>
+            <ul id="main-nav" class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="regions.html">Regions</a></li>
+                <li class="active"><a href="culture.html" aria-current="page">Culture & Cuisine</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Brazilian Culture & Cuisine</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Regional Dishes & Cultural Highlights</h2>
+            <div id="culture-list" class="culture-list"></div>
+        </section>
+        <dialog id="culture-modal" class="region-modal"></dialog>
+    </main>
+    <footer>
+        &copy; <span id="year"></span> Isabella Rodrigues P. Silva | <a href="attributions.html">Attributions</a>
+    </footer>
+    <script type="module" src="scripts/culture.js"></script>
+</body>
+
+</html>

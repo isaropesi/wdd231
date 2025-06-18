@@ -1,0 +1,220 @@
+[
+    {
+        "name": "North",
+        "description": "The North is dominated by the Amazon Rainforest and is known for its biodiversity.",
+        "culturalHighlight": {
+            "name": "Amazonian festivals and indigenous heritage",
+            "image": "amazonian-festivals.webp"
+        },
+        "mainBiomes": [
+            "Amazon Rainforest"
+        ],
+        "keyCities": [
+            {
+                "name": "Manaus",
+                "population": 2219580,
+                "attraction": "Teatro Amazonas"
+            },
+            {
+                "name": "Belém",
+                "population": 1499641,
+                "attraction": "Ver-o-Peso Market"
+            },
+            {
+                "name": "Porto Velho",
+                "population": 548952,
+                "attraction": "Estrada de Ferro Madeira-Mamoré"
+            }
+        ],
+        "typicalDishes": [
+            {
+                "name": "Tacacá",
+                "image": "tacaca.webp"
+            },
+            {
+                "name": "Pato no Tucupi",
+                "image": "pato-no-tucupi.webp"
+            },
+            {
+                "name": "Açaí",
+                "image": "acai.webp"
+            }
+        ],
+        "imageUrl": "images/north.webp"
+    },
+    {
+        "name": "Northeast",
+        "description": "The Northeast is famous for its beaches, colonial cities, and vibrant culture.",
+        "culturalHighlight": {
+            "name": "Carnaval, Forró music, and colorful festivals",
+            "image": "carnaval.webp"
+        },
+        "mainBiomes": [
+            "Caatinga",
+            "Atlantic Forest"
+        ],
+        "keyCities": [
+            {
+                "name": "Salvador",
+                "population": 2886698,
+                "attraction": "Pelourinho"
+            },
+            {
+                "name": "Recife",
+                "population": 1645727,
+                "attraction": "Boa Viagem Beach"
+            },
+            {
+                "name": "Fortaleza",
+                "population": 2686612,
+                "attraction": "Praia do Futuro"
+            }
+        ],
+        "typicalDishes": [
+            {
+                "name": "Acarajé",
+                "image": "acaraje.webp"
+            },
+            {
+                "name": "Moqueca",
+                "image": "moqueca.webp"
+            },
+            {
+                "name": "Baião de Dois",
+                "image": "baiao-de-dois.webp"
+            }
+        ],
+        "imageUrl": "images/northeast.webp"
+    },
+    {
+        "name": "Central-West",
+        "description": "The Central-West is home to the Pantanal wetlands and Brasília, the capital.",
+        "culturalHighlight": {
+            "name": "Pantanal wildlife and modernist architecture",
+            "image": "pantanal-wildlife.webp"
+        },
+        "mainBiomes": [
+            "Cerrado",
+            "Pantanal"
+        ],
+        "keyCities": [
+            {
+                "name": "Brasília",
+                "population": 3055149,
+                "attraction": "Cathedral of Brasília"
+            },
+            {
+                "name": "Goiânia",
+                "population": 1536097,
+                "attraction": "Parque Flamboyant"
+            },
+            {
+                "name": "Cuiabá",
+                "population": 623614,
+                "attraction": "Chapada dos Guimarães"
+            }
+        ],
+        "typicalDishes": [
+            {
+                "name": "Arroz com Pequi",
+                "image": "arroz-com-pequi.webp"
+            },
+            {
+                "name": "Pintado",
+                "image": "pintado.webp"
+            },
+            {
+                "name": "Sopa Paraguaia",
+                "image": "sopa-paraguaia.webp"
+            }
+        ],
+        "imageUrl": "images/centralwest.webp"
+    },
+    {
+        "name": "Southeast",
+        "description": "The Southeast is Brazil's economic powerhouse, with major cities and diverse landscapes.",
+        "culturalHighlight": {
+            "name": "Samba, Bossa Nova, and world-famous Carnival",
+            "image": "samba.webp"
+        },
+        "mainBiomes": [
+            "Atlantic Forest"
+        ],
+        "keyCities": [
+            {
+                "name": "São Paulo",
+                "population": 12396372,
+                "attraction": "Avenida Paulista"
+            },
+            {
+                "name": "Rio de Janeiro",
+                "population": 6775561,
+                "attraction": "Christ the Redeemer"
+            },
+            {
+                "name": "Belo Horizonte",
+                "population": 2521564,
+                "attraction": "Pampulha Modern Ensemble"
+            }
+        ],
+        "typicalDishes": [
+            {
+                "name": "Feijoada",
+                "image": "feijoada.webp"
+            },
+            {
+                "name": "Pão de Queijo",
+                "image": "pao-de-queijo.webp"
+            },
+            {
+                "name": "Virado à Paulista",
+                "image": "virado-a-paulista.webp"
+            }
+        ],
+        "imageUrl": "images/southeast.webp"
+    },
+    {
+        "name": "South",
+        "description": "The South is known for its European influences, cooler climate, and natural beauty.",
+        "culturalHighlight": {
+            "name": "Chimarrão, Oktoberfest, and gaucho traditions",
+            "image": "chimarrao.webp"
+        },
+        "mainBiomes": [
+            "Araucaria Forest",
+            "Pampas"
+        ],
+        "keyCities": [
+            {
+                "name": "Curitiba",
+                "population": 1963726,
+                "attraction": "Botanical Garden"
+            },
+            {
+                "name": "Porto Alegre",
+                "population": 1484941,
+                "attraction": "Usina do Gasômetro"
+            },
+            {
+                "name": "Florianópolis",
+                "population": 508826,
+                "attraction": "Joaquina Beach"
+            }
+        ],
+        "typicalDishes": [
+            {
+                "name": "Churrasco",
+                "image": "churrasco.webp"
+            },
+            {
+                "name": "Barreado",
+                "image": "barreado.webp"
+            },
+            {
+                "name": "Cuca",
+                "image": "cuca.webp"
+            }
+        ],
+        "imageUrl": "images/south.webp"
+    }
+]

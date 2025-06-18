@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brazilian Regions Directory</title>
+    <meta name="description"
+        content="Browse Brazil's five major regions. Learn about their culture, cities, cuisine, and more.">
+    <meta name="author" content="Isabella Rodrigues P. Silva">
+    <meta property="og:title" content="Brazilian Regions Directory">
+    <meta property="og:description"
+        content="Explore Brazil's North, Northeast, Central-West, Southeast, and South regions.">
+    <meta property="og:image" content="images/hero-brazil.webp">
+    <meta property="og:url" content="https://isaropesi.github.io/wdd231/final/regions.html">
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <button id="menu-btn" aria-label="Open navigation">&#9776;</button>
+            <ul id="main-nav" class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="regions.html" aria-current="page">Regions</a></li>
+                <li><a href="culture.html">Culture & Cuisine</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Brazilian Regions Directory</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Brazil's Five Major Regions</h2>
+            <div id="regions-list" class="regions-list"></div>
+        </section>
+        <dialog id="region-modal" class="region-modal"></dialog>
+    </main>
+    <footer>
+        &copy; <span id="year"></span> Isabella Rodrigues P. Silva | <a href="attributions.html">Attributions</a>
+    </footer>
+    <script type="module" src="scripts/regions.js"></script>
+</body>
+
+</html>

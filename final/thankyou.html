@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Explore the Regions of Brazil</title>
+    <meta name="description" content="Thank you for contacting us or sharing your expertise about Brazil's regions.">
+    <meta name="author" content="Isabella Rodrigues P. Silva">
+    <meta property="og:title" content="Thank You - Explore the Regions of Brazil">
+    <meta property="og:description" content="We appreciate your message and interest in Brazil's regions.">
+    <meta property="og:image" content="images/hero-brazil.webp">
+    <meta property="og:url" content="https://isaropesi.github.io/wdd231/final/thankyou.html">
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <button id="menu-btn" aria-label="Open navigation">&#9776;</button>
+            <ul id="main-nav" class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="regions.html">Regions</a></li>
+                <li><a href="culture.html">Culture & Cuisine</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Thank You!</h1>
+    </header>
+    <main>
+        <section>
+            <h2>We appreciate your submission!</h2>
+            <dl>
+                <dt>Name</dt>
+                <dd id="name"></dd>
+                <dt>Email</dt>
+                <dd id="email"></dd>
+                <dt>Region</dt>
+                <dd id="region"></dd>
+                <dt>Message</dt>
+                <dd id="message"></dd>
+                <dt>Submitted</dt>
+                <dd id="timestamp"></dd>
+            </dl>
+            <a href="index.html" class="cta-btn">Return Home</a>
+        </section>
+    </main>
+    <footer>
+        &copy; <span id="year"></span> Isabella Rodrigues P. Silva | <a href="attributions.html">Attributions</a>
+    </footer>
+    <script>
+        function getParam(name) {
+            const url = new URL(window.location.href);
+            return url.searchParams.get(name) || '';
+        }
+        document.getElementById('name').textContent = getParam('name');
+        document.getElementById('email').textContent = getParam('email');
+        document.getElementById('region').textContent = getParam('region');
+        document.getElementById('message').textContent = getParam('message');
+        document.getElementById('timestamp').textContent = getParam('timestamp') ? new Date(getParam('timestamp')).toLocaleString() : '';
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

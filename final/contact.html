@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Share Your Expertise</title>
+    <meta name="description" content="Contact us or share your regional expertise about Brazil.">
+    <meta name="author" content="Isabella Rodrigues P. Silva">
+    <meta property="og:title" content="Contact & Share Your Expertise">
+    <meta property="og:description" content="Send us your questions or share your knowledge about Brazil's regions.">
+    <meta property="og:image" content="images/hero-brazil.webp">
+    <meta property="og:url" content="https://isaropesi.github.io/wdd231/final/contact.html">
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <button id="menu-btn" aria-label="Open navigation">&#9776;</button>
+            <ul id="main-nav" class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="regions.html">Regions</a></li>
+                <li><a href="culture.html">Culture & Cuisine</a></li>
+                <li class="active"><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Contact & Share Your Expertise</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Contact Us / Share Your Regional Expertise</h2>
+            <form id="expertise-form" method="get" action="thankyou.html" autocomplete="on">
+                <label>
+                    Name
+                    <input type="text" name="name" required autocomplete="name">
+                </label>
+                <label>
+                    Email
+                    <input type="email" name="email" required autocomplete="email">
+                </label>
+                <label>
+                    Region
+                    <select name="region" required>
+                        <option value="" disabled selected>Select a region</option>
+                        <option value="North">North</option>
+                        <option value="Northeast">Northeast</option>
+                        <option value="Central-West">Central-West</option>
+                        <option value="Southeast">Southeast</option>
+                        <option value="South">South</option>
+                    </select>
+                </label>
+                <label>
+                    Your Message / Expertise
+                    <textarea name="message" required></textarea>
+                </label>
+                <input type="hidden" name="timestamp" id="timestamp">
+                <input type="submit" value="Send">
+            </form>
+        </section>
+    </main>
+    <footer>
+        &copy; <span id="year"></span> Isabella Rodrigues P. Silva | <a href="attributions.html">Attributions</a>
+    </footer>
+    <script>
+        document.getElementById('timestamp').value = new Date().toISOString();
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

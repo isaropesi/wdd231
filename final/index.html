@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore the Regions of Brazil</title>
+    <meta name="description"
+        content="Discover Brazil's diverse regions, culture, cuisine, and cities. Start your journey to explore the unique beauty of Brazil.">
+    <meta name="author" content="Isabella Rodrigues P. Silva">
+    <meta property="og:title" content="Explore the Regions of Brazil">
+    <meta property="og:description" content="A dynamic guide to Brazil's regions, culture, cuisine, and cities.">
+    <meta property="og:image" content="images/hero-brazil.webp">
+    <meta property="og:url" content="https://isaropesi.github.io/wdd231/final/index.html">
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <button id="menu-btn" aria-label="Open navigation">&#9776;</button>
+            <ul id="main-nav" class="nav-list">
+                <li class="active"><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="regions.html">Regions</a></li>
+                <li><a href="culture.html">Culture & Cuisine</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Explore the Regions of Brazil</h1>
+    </header>
+    <main>
+        <section class="hero">
+            <img src="images/hero-brazil.webp" alt="Brazilian landscape" class="hero-img" loading="lazy">
+            <div class="hero-overlay">
+                <h2 style="color: #fff;">Discover the Diversity of Brazil</h2>
+                <p>From the Amazon to the Pampas, explore the unique regions, cultures, and flavors of Brazil.</p>
+                <a href="regions.html" class="cta-btn">Explore Regions</a>
+            </div>
+        </section>
+        <section id="featured-region">
+            <h2>Featured Region</h2>
+            <div id="featured-region-card"></div>
+        </section>
+    </main>
+    <footer>
+        &copy; <span id="year"></span> Isabella Rodrigues P. Silva | <a href="attributions.html">Attributions</a>
+    </footer>
+    <script type="module" src="scripts/index.js"></script>
+</body>
+
+</html>

@@ -6,6 +6,7 @@
     --text-font: "Prata", serif;
 }
 
+/* Basic reset and general styles */
 body {
     font-family: var(--text-font);
     margin: 0;
@@ -18,21 +19,21 @@ header {
     background-color: var(--oxford-blue);
     padding: 1rem;
     display: flex;
-    align-items: end;
+    align-items: center;
     justify-content: space-between;
 }
 
-.logo-container {
+.flag-container {
     display: flex;
     align-items: center;
 }
 
-.logo-container img {
-    max-height: 150px;
+.flag-container img {
+    max-height: 80px;
     margin-right: 1rem;
 }
 
-.logo-container h1 {
+.flag-container h1 {
     font-family: var(--heading-font);
     color: var(--azure);
 }
@@ -47,7 +48,7 @@ nav button {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    z-index: 30;
+    z-index: 30; 
 }
 
 nav ul {
@@ -56,10 +57,16 @@ nav ul {
     margin: 0;
     display: flex;
     background-color: var(--tiffany-blue);
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
 }
 
 nav ul.open {
     display: flex;
+    max-height: 500px; 
+    opacity: 1;
 }
 
 nav ul li a {
@@ -94,150 +101,26 @@ footer {
     font-family: var(--heading-font);
 }
 
-.home-masonry {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 2rem;
-    margin: 2rem 0;
-    align-items: start;
-}
-
-.home-masonry section {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(16, 25, 53, 0.08);
-    padding: 1.5rem 1rem;
-    min-width: 0;
-    break-inside: avoid;
-}
-
-.spotlights-masonry {
-    margin: 2rem 0;
-}
-
-.spotlights-masonry h2 {
-    margin-bottom: 1rem;
-}
-
-.spotlights-masonry #spotlights {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-}
-
-.spotlights-masonry .member-card {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(16, 25, 53, 0.08);
-    padding: 1rem;
-    text-align: center;
-}
-
-.hero {
-    position: relative;
-    width: 100%;
-    max-height: 350px;
-    overflow: hidden;
-}
-
-.hero-img {
-    width: 100%;
-    max-height: 350px;
-    object-fit: cover;
-    display: block;
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(16, 25, 53, 0.3);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-overlay h2 {
-    color: #fff;
-    font-size: 2rem;
-    text-shadow: 0 2px 8px #101935;
-    margin: 0;
-}
-
-.cta-join {
-    margin-top: 1rem;
-    padding: 0.75rem 2rem;
-    background: var(--tiffany-blue);
-    color: var(--oxford-blue);
-    font-weight: bold;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    box-shadow: 0 2px 8px rgba(16, 25, 53, 0.08);
-    transition: background 0.2s, color 0.2s;
-    display: inline-block;
-    position: relative;
-}
-
-.cta-join:hover,
-.cta-join:focus {
-    background: var(--oxford-blue);
-    color: var(--azure);
-    outline: 2px solid var(--tiffany-blue);
-}
-
-.weather-current {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-size: 1.1rem;
-}
-
-.weather-icon {
-    width: 48px;
-    height: 48px;
-    display: none;
-}
-
-.weather-forecast-list {
-    display: flex;
-    gap: 2rem;
-    margin-top: 1rem;
-}
-
-@media (max-width: 900px) {
-    .home-masonry {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .spotlights-masonry #spotlights {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
+/* Responsive navigation for smaller screens */
 @media (max-width: 768px) {
     nav ul {
-        display: flex;
+        display: flex; /* para permitir a transição */
         flex-direction: column;
-        align-items: flex-start;
-        width: 250px;
-        height: 100vh;
+        width: 100%;
         background-color: var(--tiffany-blue);
-        position: fixed;
+        position: absolute;
         top: 0;
-        right: 0;
-        left: auto;
+        left: 0;
         z-index: 20;
-        transform: translateX(100%);
-        opacity: 1;
-        transition: transform 0.3s ease;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
     }
 
     nav ul.open {
-        transform: translateX(0);
+        max-height: 500px;
+        opacity: 1;
     }
 
     nav button {
@@ -245,22 +128,7 @@ footer {
         z-index: 30;
     }
 
-    .logo-container h1 {
-        font-size: 1.4rem;
-    }
-}
-
-@media (max-width: 600px) {
-    .home-masonry {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .home-masonry section {
-        padding: 1rem 0.5rem;
-    }
-
-    .spotlights-masonry #spotlights {
-        grid-template-columns: 1fr;
+    .flag-container h1 {
+        font-size: 1.2rem;
     }
 }
