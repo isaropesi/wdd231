@@ -1,0 +1,50 @@
+[
+    {
+        "title": "Ponte Hercílio Luz",
+        "image": "ponte_hercilio.webp",
+        "address": "Av. Gov. Irineu Bornhausen, Florianópolis - SC",
+        "description": "Iconic suspension bridge and symbol of Florianópolis, connecting the island to the mainland."
+    },
+    {
+        "title": "Praia da Joaquina",
+        "image": "joaquina.webp",
+        "address": "Praia da Joaquina, Florianópolis - SC",
+        "description": "Famous beach known for its surfing waves, sand dunes, and vibrant atmosphere."
+    },
+    {
+        "title": "Mercado Público",
+        "image": "mercado_publico.webp",
+        "address": "R. Jerônimo Coelho, 60 - Centro, Florianópolis - SC",
+        "description": "Historic public market offering local foods, crafts, and live music."
+    },
+    {
+        "title": "Lagoa da Conceição",
+        "image": "lagoa_conceicao.webp",
+        "address": "Lagoa da Conceição, Florianópolis - SC",
+        "description": "Scenic lagoon surrounded by hills, restaurants, and water sports activities."
+    },
+    {
+        "title": "Ilha do Campeche",
+        "image": "ilha_campeche.webp",
+        "address": "Ilha do Campeche, Florianópolis - SC",
+        "description": "Protected island with crystal-clear waters, hiking trails, and archaeological sites."
+    },
+    {
+        "title": "Catedral Metropolitana",
+        "image": "catedral.webp",
+        "address": "R. Padre Miguelinho, 55 - Centro, Florianópolis - SC",
+        "description": "Neoclassical cathedral and architectural landmark in the city center."
+    },
+    {
+        "title": "Fortaleza de São José da Ponta Grossa",
+        "image": "fortaleza.webp",
+        "address": "Praia do Forte, Florianópolis - SC",
+        "description": "18th-century fortress with panoramic views and historical exhibits."
+    },
+    {
+        "title": "Parque Municipal da Lagoa do Peri",
+        "image": "lagoa_peri.webp",
+        "address": "Rod. Baldicero Filomeno, 10.000 - Armação, Florianópolis - SC",
+        "description": "Nature park with freshwater lagoon, hiking trails, and picnic areas."
+    }
+]

@@ -77,3 +77,186 @@ body {
     color: var(--oxford-blue);
     font-family: var(--heading-font);
 }
+
+/* Hero Section Responsive Styles */
+.hero {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-height: 400px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(16, 25, 53, 0.7) 0%, rgba(16, 25, 53, 0.2) 100%);
+    color: var(--azure);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.hero-overlay h2 {
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-join {
+    background: var(--tiffany-blue);
+    color: var(--oxford-blue);
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: var(--heading-font);
+    font-size: 1.1rem;
+    transition: background 0.2s, color 0.2s;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.cta-join:hover {
+    background: var(--oxford-blue);
+    color: var(--azure);
+}
+
+/* Home page horizontal grid for events, weather, forecast */
+.home-masonry {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.home-masonry section {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(16, 25, 53, 0.08);
+    padding: 1.5rem 1rem;
+    min-width: 0;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.home-masonry h2 {
+    margin-top: 0;
+    font-family: var(--heading-font);
+    color: var(--oxford-blue);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.weather-current,
+.weather-forecast-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Spotlights horizontal grid */
+.spotlights-masonry {
+    margin-bottom: 2rem;
+}
+
+.spotlights-masonry #spotlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.spotlights-masonry .member-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(16, 25, 53, 0.08);
+    padding: 1.5rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.spotlights-masonry .member-card img {
+    max-width: 100px;
+    max-height: 80px;
+    margin-bottom: 0.5rem;
+}
+
+.spotlights-masonry .member-card h3 {
+    margin: 0.5rem 0 0.25rem 0;
+    font-family: var(--heading-font);
+    color: var(--oxford-blue);
+}
+
+.spotlights-masonry .member-card p {
+    margin: 0.25rem 0;
+    font-size: 1rem;
+    color: var(--oxford-blue);
+}
+
+@media (max-width: 900px) {
+    .hero-img {
+        max-height: 250px;
+    }
+
+    .hero-overlay {
+        padding: 1rem;
+    }
+
+    .hero-overlay h2 {
+        font-size: 1.3rem;
+    }
+
+    .home-masonry {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    .home-masonry section {
+        align-items: stretch;
+    }
+
+    .spotlights-masonry #spotlights {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        border-radius: 0;
+    }
+
+    .hero-img {
+        max-height: 160px;
+    }
+
+    .hero-overlay {
+        padding: 0.5rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-overlay h2 {
+        font-size: 1.1rem;
+    }
+}

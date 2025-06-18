@@ -21,18 +21,23 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    /* Added for menu button positioning */
 }
 
+.logo-container,
 .flag-container {
     display: flex;
     align-items: center;
 }
 
+.logo-container img,
 .flag-container img {
     max-height: 80px;
     margin-right: 1rem;
 }
 
+.logo-container h1,
 .flag-container h1 {
     font-family: var(--heading-font);
     color: var(--azure);
@@ -48,7 +53,7 @@ nav button {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    z-index: 30; 
+    z-index: 30;
 }
 
 nav ul {
@@ -58,14 +63,15 @@ nav ul {
     display: flex;
     background-color: var(--tiffany-blue);
     transition: max-height 0.3s ease, opacity 0.3s ease;
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
+    max-height: 500px;
+    /* Show menu by default on desktop */
+    opacity: 1;
+    overflow: visible;
 }
 
 nav ul.open {
     display: flex;
-    max-height: 500px; 
+    max-height: 500px;
     opacity: 1;
 }
 
@@ -104,7 +110,7 @@ footer {
 /* Responsive navigation for smaller screens */
 @media (max-width: 768px) {
     nav ul {
-        display: flex; /* para permitir a transição */
+        display: flex;
         flex-direction: column;
         width: 100%;
         background-color: var(--tiffany-blue);
@@ -128,6 +134,7 @@ footer {
         z-index: 30;
     }
 
+    .logo-container h1,
     .flag-container h1 {
         font-size: 1.2rem;
     }
